@@ -14,7 +14,6 @@ export default function app(game, questionsCount = countOfQuestions) {
   for (let i = 0; i < questionsCount; i += 1) {
     const { question, correctAnswer } = questionsAnswers[i];
     console.log(`Question: ${question}`);
-    console.log(correctAnswer);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.

@@ -1,5 +1,6 @@
 import predicateGame from '../utils/predicateGame.js';
 
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -12,6 +13,6 @@ const isPrime = (num) => {
   }
   return true;
 };
-const prime = (questionCount = 3) => predicateGame(isPrime, questionCount);
+const prime = (questionCount = 3) => predicateGame(rules, isPrime, questionCount);
 
 export default prime;

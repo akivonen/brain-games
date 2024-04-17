@@ -1,3 +1,5 @@
+import randomize from './utils/randomize.js';
+
 export default function calc(questionCount = 3) {
   const rules = 'What is the result of the expression?';
   const questionsAnswers = [];
@@ -8,9 +10,9 @@ export default function calc(questionCount = 3) {
   };
   const operators = ['+', '-', '*'];
   for (let i = 0; i < questionCount; i += 1) {
-    const firstNum = Math.floor(Math.random() * 10);
-    const secondtNum = Math.floor(Math.random() * 10);
-    const operatorIndex = Math.floor(Math.random() * 3);
+    const firstNum = randomize(0, 10);
+    const secondtNum = randomize(0, 10);
+    const operatorIndex = randomize(0, 2);
     const operator = operators[operatorIndex];
     const expression = [firstNum, operator, secondtNum]
       .map((el) => el.toString())

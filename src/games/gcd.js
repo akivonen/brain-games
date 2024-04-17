@@ -1,4 +1,4 @@
-import randomize from './utils/randomize.js';
+import randomize from '../utils/randomize.js';
 
 const getGCD = (a, b) => {
   if (b === 0) {
@@ -6,7 +6,7 @@ const getGCD = (a, b) => {
   }
   return getGCD(b, a % b);
 };
-export default function gcd(questionCount = 3) {
+const gcd = (questionCount = 3) => {
   const rules = 'Find the greatest common divisor of given numbers.';
   const questionsAnswers = [];
   for (let i = 0; i < questionCount; i += 1) {
@@ -20,4 +20,6 @@ export default function gcd(questionCount = 3) {
     });
   }
   return { rules, questionsAnswers };
-}
+};
+
+export default gcd;

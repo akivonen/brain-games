@@ -16,8 +16,7 @@ export default function app(game, questionsCount = countOfQuestions) {
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-      Let's try again, Bill!`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
       return;
     }
     console.log('Correct!');

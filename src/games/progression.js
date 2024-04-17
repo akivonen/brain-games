@@ -1,6 +1,6 @@
-import randomize from './utils/randomize.js';
+import randomize from '../utils/randomize.js';
 
-export default function progression(questionCount = 3) {
+const progression = (questionCount = 3) => {
   const rules = 'What number is missing in the progression?';
   const arrayLength = randomize(5, 15);
   const questionsAnswers = [];
@@ -22,4 +22,6 @@ export default function progression(questionCount = 3) {
     });
   }
   return { rules, questionsAnswers };
-}
+};
+
+export default progression;

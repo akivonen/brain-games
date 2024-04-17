@@ -1,6 +1,6 @@
-import randomize from './utils/randomize.js';
+import randomize from '../utils/randomize.js';
 
-export default function calc(questionCount = 3) {
+const calc = (questionCount = 3) => {
   const rules = 'What is the result of the expression?';
   const questionsAnswers = [];
   const operationsMapping = {
@@ -25,4 +25,6 @@ export default function calc(questionCount = 3) {
     });
   }
   return { rules, questionsAnswers };
-}
+};
+
+export default calc;

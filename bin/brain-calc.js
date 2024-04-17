@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import app from '../src/index.js';
-import even from '../src/even.js';
+import calc from '../src/calc.js';
 
-app(even);
+app(calc);
